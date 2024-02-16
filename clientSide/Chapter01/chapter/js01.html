@@ -20,7 +20,40 @@
    <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="tinley.css" />
    <link href="http://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet" type="text/css">
 
-   <script src="js01b.js" defer></script>
+   <script>
+      //define variables containing plant filenames
+      let blanket = "blanket.jpg";
+      let rugosa = "rugosa.jpg";
+      let bluestem = "bluestem.jpg";
+
+      //add event handlers to the list items
+      document.getElementById("blanket").onclick = function() {
+         document.getElementById("plantImg").src = blanket;
+      }
+      document.getElementById("rugosa").onclick = function() {
+         document.getElementById("plantImg").src = rugosa;
+      }
+      document.getElementById("bluestem").onclick = function() {
+         document.getElementById("plantImg").src = bluestem;
+      }
+
+      /*
+         Information on available plants
+         including link to USDA website
+      */
+
+      document.write("<p>Plant choices for");
+         document.write("<a href= 'http://planthardiness.ars.usda.gov'>");
+         document.write(" hardiness zones</a>");
+         document.write(" 5a - 6b </p>");//hardiness zones for Chicago and surrounding area
+
+      let captionText = "<p>Plant choices for " +
+                        "<a href='http://planthardiness.ars.usda.gov'>" +
+                        "hardiness zones</a>" +
+                        " 5a - 6b </p>";
+
+      document.getElementById("imgCaption").innerHTML = captionText;
+   </script>
 </head>
 
 <body>
@@ -30,7 +63,7 @@
             <img src="flower.png" width="132" height="120" alt="Tinley Xeriscapes" title="" id="logo1" />
             <img src="flower.png" width="132" height="120" alt="Tinley Xeriscapes" title="" id="logo2" />
             <img src="txlogo.png" width="132" height="120" alt="Tinley Xeriscapes" title="" id="logo3" />
-            tinley xeriscapes
+            
          </h1>
       </header>
 
@@ -54,22 +87,7 @@
       <article>   
          <figure>
             <img src="#" alt="" title="" id="plantImg" />         
-            <figcaption id="imgCaption"> 
-               <script>
-                  /*
-                     Information on available plants 
-                     including link to USDA website
-                  */
-                  document.write("<p>Plant choices for");
-                  document.write("<a href= 'http://planthardiness.ars.usda.gov'>");
-                  document.write(" hardiness zones</a>");
-                  document.write(" 5a - 6b </p>");//hardiness zones for Chicago and surrounding area
-                  
-                  //define variables containing plant file names
-                  let blanket = "blanket.jpg";
-                  let bluestem = "bluestem.jpg";
-                  let rugosa = "rugosa.jpg";
-               </script>           
+            <figcaption id="imgCaption">            
             </figcaption>
          </figure>       
       </article>
