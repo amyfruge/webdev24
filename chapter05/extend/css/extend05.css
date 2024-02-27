@@ -1,0 +1,51 @@
+/*  
+Student Name: Amy Fruge
+File name: extend05.css
+Date: 02/25/2024
+*/
+body {
+    background-color: #dde3fd;
+}
+
+#container {
+    padding-bottom: 500px;
+}
+
+.box {
+    border: 1px solid #000;
+    margin: 2%;
+    padding: 2%;
+    background-color: #798ef6;
+    color: #091034;
+    width: 400px;
+    height: 170px;
+}
+
+/* sticky */
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/* relative */
+.relative {
+    position: relative;
+    top: 50px;
+    left: 20px;
+}
+
+/* fixed */
+.fixed {
+    position: fixed;
+    top: 70px;
+    right: 40px;
+}
+
+/* absolute */
+.absolute {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+
+}

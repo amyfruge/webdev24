@@ -132,3 +132,42 @@ footer p a{
     color: #fff;
     text-decoration: none;
 }
+
+/*(line 152) Media query for tablet Viewport */
+@media screen and (min-width: 630px){
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class*/
+    .tablet-desktop{
+        display: block;
+
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    /* Tablet Viewport: Style rules for header*/
+    header{
+        position: static;
+        padding-bottom: 2%;
+    }
+
+    /* Tablet Viewport: Style rules for nav area */
+    nav li{
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+
+    nav li:last-child{
+        border-right: none;
+    }
+
+    nav li a{
+        padding: 0.1em 0.75em;
+    }
+
+    /* Tablet Viewport: Style rules for main content area */
+    main ul{
+        margin: 0 0 4% 10%;
+    }
+}
