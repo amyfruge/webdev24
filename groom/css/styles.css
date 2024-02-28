@@ -86,6 +86,14 @@ main {
     width: 100%;
 }
 
+.services ul img {
+    width: 50%;
+    height: 50%;
+}
+.special-services img {
+    width: 50%;
+    height: 50%;
+}
 /* Footer Styles */
 footer {
     text-align: center;
