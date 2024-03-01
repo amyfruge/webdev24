@@ -23,20 +23,22 @@ on 01/22/2024-->
 
     <!-- Use the main area to add the main content of the webpage -->
     <main>
-        <p>The main place to purchase the FNAF games is Steam.</p>
+        <h3>The main place to purchase the FNAF games is Steam.</h3>
+        <h3>These are the games in the order that the games came out and their prices on Steam:</h3>
         
         <ul>
-            <li>FNAF 1: $4.99</li>
-            <li>FNAF 2: $7.99</li>
-            <li>FNAF 3: $7.99</li>
-            <li>FNAF 4: $7.99</li>
-            <li>FNAF 5: $7.99</li>
+            <li>FNAF 1: $4.99 <input type="number" id="qty1" min="0" value="0" onchange="calculateTotal()"></li>
+            <li>FNAF 2: $7.99 <input type="number" id="qty2" min="0" value="0" onchange="calculateTotal()"></li>
+            <li>FNAF 3: $7.99 <input type="number" id="qty3" min="0" value="0" onchange="calculateTotal()"></li>
+            <li>FNAF 4: $7.99 <input type="number" id="qty4" min="0" value="0" onchange="calculateTotal()"></li>
+            <li>FNAF 5: $7.99 <input type="number" id="qty5" min="0" value="0" onchange="calculateTotal()"></li>
             <li>FNAF 6: FREE!</li>
-            <li>FNAF 7: $29.99</li>
-            <li>FNAF 8: $39.99</li>
-            <li>FNAF 9: $39.99</li>
+            <li>FNAF 7: $29.99 <input type="number" id="qty7" min="0" value="0" onchange="calculateTotal()"></li>
+            <li>FNAF 8: $39.99 <input type="number" id="qty8" min="0" value="0" onchange="calculateTotal()"></li>
+            <li>FNAF 9: $39.99 <input type="number" id="qty9" min="0" value="0" onchange="calculateTotal()"></li>
         </ul>
 
+        <p>Your Total Price on Steam: <span id="totalPrice">$0.00</span></p>
     </main>
 
     <br>
@@ -53,5 +55,26 @@ on 01/22/2024-->
         <p>&copy; Copyright 2024, All Rights Reserved.</p>
         <p>FiveNights@scare.net</p>
     </footer>
+
+    <script>
+        function calculateTotal() {
+            // Get the quantity inputs
+            var qty1 = parseInt(document.getElementById('qty1').value);
+            var qty2 = parseInt(document.getElementById('qty2').value);
+            var qty3 = parseInt(document.getElementById('qty3').value);
+            var qty4 = parseInt(document.getElementById('qty4').value);
+            var qty5 = parseInt(document.getElementById('qty5').value);
+            var qty7 = parseInt(document.getElementById('qty7').value);
+            var qty8 = parseInt(document.getElementById('qty8').value);
+            var qty9 = parseInt(document.getElementById('qty9').value);
+
+            // Calculate total price
+            var totalPrice = (qty1 * 4.99) + (qty2 * 7.99) + (qty3 * 7.99) + (qty4 * 7.99) + (qty5 * 7.99) + (qty7 * 29.99) + (qty8 * 39.99) + (qty9 * 39.99);
+
+            // Display total price
+            document.getElementById('totalPrice').textContent = "$" + totalPrice.toFixed(2);
+        }
+    </script>
+    
 </body>
 </html>
