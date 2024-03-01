@@ -89,11 +89,22 @@ main {
 .services ul img {
     width: 50%;
     height: 50%;
+    float: left;
 }
+.services {
+    width: 60%;
+    float: left;
+}
+
+.special-services {
+    float: right;
+}
+
 .special-services img {
     width: 50%;
     height: 50%;
 }
+
 /* Footer Styles */
 footer {
     text-align: center;
